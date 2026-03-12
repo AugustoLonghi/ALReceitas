@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Pizza e Molhos</title>
+    <title>Receitas de Pizza</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -13,8 +13,9 @@
         <div class="form-group">
             <label for="receita">Receita:</label>
             <select id="receita" onchange="atualizarTipos()">
-                <option value="pizza">Pizza (Massa)</option>
+                <option value="pizza">Massa</option>
                 <option value="molho">Molho</option>
+				<option value="cobertura">Cobertura</option>
             </select>
         </div>
 
@@ -26,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            <label for="tamanho">Tamanho da Pizza:</label>
+            <label for="tamanho">Tamanho:</label>
             <select id="tamanho">
                 <option value="25">25cm (Broto)</option>
                 <option value="35">35cm (Grande)</option>
@@ -34,15 +35,20 @@
         </div>
 
         <div class="form-group">
-            <label for="quantidade">Quantidade de Pizzas:</label>
+            <label for="quantidade">Quantidade:</label>
             <input type="number" id="quantidade" value="1" min="1">
         </div>
 
-        <button onclick="calcular()">Calcular Receita</button>
+        <button onclick="calcular()">Calcular Agora</button>
 
         <div id="resultado" class="result-area" style="display: none;">
             <h2 id="titulo-resultado">Ingredientes:</h2>
             <ul id="lista-ingredientes"></ul>
+		
+		    <div class="prep-box">
+				<strong>Modo de Preparo:</strong>
+			<div id="texto-preparo"></div>
+			</div>
             
             <div id="info-tecnica" class="note-box">
                 <strong>Dica do Chef:</strong>

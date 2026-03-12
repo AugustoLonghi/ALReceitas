@@ -105,3 +105,24 @@ li span {
 .note-box b {
     color: #8d6e63;
 }
+
+/* Estilo para o Modo de Preparo */
+.prep-box {
+    margin-top: 1.5rem;
+    padding: 15px;
+    background-color: #f1f8ff;
+    border-left: 4px solid #2196f3;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+}
+.prep-box strong {
+    color: #0d47a1;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.prep-box p {
+    margin: 5px 0;
+}
