@@ -2,11 +2,8 @@
 const opcoesTipo = {
     pizza: [
         { val: "napolitana", texto: "Napolitana" },
-        { val: "paulista", texto: "Paulista" },
+        { val: "brasileira", texto: "Paulista" },
         { val: "pan", texto: "Pan" },
-        { val: "romana", texto: "Romana" },
-        { val: "newyork", texto: "New York" },
-        { val: "chicago", texto: "Chicago" }
     ],
     molho: [
         { val: "sugo", texto: "Sugo (Clássico)" },
@@ -25,7 +22,7 @@ const opcoesTipo = {
 const database = {
     pizza: {
         napolitana: { 
-            baseF25: 150, agua: 0.70, ferm: 0.005, sal: 0.02, acucar: 0, gord: 0, 
+            baseF25: 150, agua: 0.70, ferm: 0.005, sal: 0.02, acucar: 0, gord: 0, queijo:0.33,
             nota: `Utilize farinha tipo 00.<br> 
 				   Temperatura recomentada do forno: 430-500°C.<br>
 				   Fermentação dentro da geladeira 24-48h.<br>
@@ -37,16 +34,15 @@ const database = {
                       5. Para abrir, deixe a massa cair do pote, e começe a apertar o dentro levando o ar para fora, tome cuidado para não amassar a borda.<br>
                       6. Abra a massa com as mãos até ficar no tamanho correto e começe a montar a pizza.`
         },
-        paulista: { baseF25: 150, agua: 0.60, ferm: 0.01, sal: 0.02, acucar: 0.01, gord: 0.02, nota: "Farinha 01, forno 300°C.",
+        brasileira: { baseF25: 150, agua: 0.60, ferm: 0.016, sal: 0.023, acucar: 0.01, gord: 0.04, queijo:0.10, nota: "Farinha 01, forno 380°C.",
 			preparo: `1. Em uma tijela misture água morna (30 seg no microondas) e o fermento e deixe descansando por 10 min.<br>
-			      2. Coloque a farinha, sal e açucar e misture até incorporar depois começe a sovar por 5 min.<br>
-				  3. Faça a bola e deixe descansando em um pote por 1h30.<br>
-				  4. Abra a massa até o tamanho correto deixando a espeçura de um dedo.<br>
-				  5. Unte a forma com azeite e coloque a massa nela, deixe descansando por mais 1h30.<br>
-				  6. Passe molho na massa, um fio de azeite na borda e coloque para pré-assar em um forno pré aquecido (30 min) em 300º por 20 min.<br>
-				  7. Coloque mais molho, monte a pizza e volte ao forno.`
+			      2. Coloque a farinha, sal e açucar e misture até incorporar depois adicione o azeite e continue sovando.<br>
+				  3. Faça a bola e deixe descansando em um pote por 2h.<br>
+				  4. Abra a massa até o tamanho correto.<br>
+				  5. Passe molho na massa, um fio de azeite na borda e coloque para pré-assar em um forno pré aquecido (30 min) em 380º por 10 min.<br>
+				  6. Coloque mais molho, monte a pizza e volte ao forno.`
 		},
-        pan: { baseF25: 190, agua: 0.6447, ferm: 0.0132, sal: 0.0158, acucar: 0.0263, gord: 0, nota: "Forno 220-250°C.",
+        pan: { baseF25: 190, agua: 0.6447, ferm: 0.0132, sal: 0.0158, acucar: 0.0263, gord: 0, queijo:0.105, nota: "Forno 220-250°C.",
 		    preparo: `1. Em uma tijela misture água morna (30 seg no microondas) e o fermento e deixe descansando por 10 min.<br>
 					  2. Coloque a farinha, sal e açucar e misture até incorporar depois começe a sovar por 5 min.<br>
 				      3. Faça a bola e deixe descansando em um pote por 1h30.<br>
@@ -124,6 +120,7 @@ function calcular() {
             { n: "Sal", v: fTotal * r.sal, u: "g" },
             { n: "Açúcar", v: fTotal * r.acucar, u: "g" },
             { n: "Azeite/Gordura", v: fTotal * r.gord, u: "g/ml" }
+			{ n: "Queijo", v: fTotal * r.queijo, u: "g/ml" }
         ];
     } else if (categoria === "molho") {
         const r = database.molho[tipo];
