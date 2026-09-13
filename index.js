@@ -117,7 +117,7 @@ function calcular() {
             { n: "Fermento", v: fTotal * r.ferm, u: "g" },
             { n: "Sal", v: fTotal * r.sal, u: "g" },
             { n: "Açúcar", v: fTotal * r.acucar, u: "g" },
-            { n: "Azeite/Gordura", v: fTotal * r.gord, u: "g/ml" }
+            { n: "Azeite/Gordura", v: fTotal * r.gord, u: "g/ml" },
 			{ n: "Queijo", v: fTotal * r.queijo, u: "g/ml" }
         ];
     } else if (categoria === "molho") {
