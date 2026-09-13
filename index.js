@@ -2,7 +2,7 @@
 const opcoesTipo = {
     pizza: [
         { val: "napolitana", texto: "Napolitana" },
-        { val: "brasileira", texto: "Paulista" },
+        { val: "brasileira", texto: "Brasileira" },
         { val: "pan", texto: "Pan" },
     ],
     molho: [
