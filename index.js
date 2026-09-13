@@ -42,7 +42,7 @@ const database = {
 				  5. Passe molho na massa, um fio de azeite na borda e coloque para pré-assar em um forno pré aquecido (30 min) em 380º por 10 min.<br>
 				  6. Coloque mais molho, monte a pizza e volte ao forno.`
 		},
-        pan: { baseF25: 190, agua: 0.6447, ferm: 0.0132, sal: 0.0158, acucar: 0.0263, gord: 0, queijo: 0.1005, nota: "Forno 220-250°C.",
+        pan: { baseF25: 190, agua: 0.6447, ferm: 0.0132, sal: 0.0158, acucar: 0.0263, gord: 0, queijo: 0.105, nota: "Forno 220-250°C.",
 		    preparo: `1. Em uma tijela misture água morna (30 seg no microondas) e o fermento e deixe descansando por 10 min.<br>
 					  2. Coloque a farinha, sal e açucar e misture até incorporar depois começe a sovar por 5 min.<br>
 				      3. Faça a bola e deixe descansando em um pote por 1h30.<br>
